@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                %
+% Aston University Postgraduate Thesis Template  %
+% Author:  Dr Chloe M. Barnes                    %
+%          Department of Computer Science        %
+%          Aston University                      %
+% Version: v1.0                                  %
+% Date:    4th May 2023                          %
+%                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[thesisdraft]{thesis-aston}
+
+%%%%%%%%%% SPECIFICATIONS %%%%%%%%%%
+
+% This template has been altered to incorporate the 
+% https://www.aston.ac.uk/system/files/2022-08/Summary%20of%20changes%20to%20Research%20Regulations%20for%202021-22.pdf
+\RequirePackage{thesis-aston} % uses the thesis-aston.sty file -- do not remove
+% CLASS OPTION: use the `thesisdraft' class option to bring up statistics on the final page about comments left to address
+
+%%%%%%%%%% Non-Essential Packages %%%%%%%%%%
+
+\usepackage{lipsum} % to generate dummy text for the template
+\setlength{\marginparwidth}{2cm} % sets margin for notes
+\usepackage{todonotes} % enables comment bubbles for todo notes
+
+\usepackage{siunitx} % for formatting scientific numbers (recommended as it makes rounding/changing how numbers are displayed easier)
+\usepackage{hyperref} % styles hyperlinks (recommended)
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+    \hypersetup{
+        colorlinks=false, % link is a box, link is coloured instead if true
+        linkcolor=black,  % document links
+        citecolor=black,  % bibliography
+        filecolor=black,  % links to files
+        urlcolor=black    % urls
+    }
+
+% Bibliography style commands: these are the recommended values for referencing, however your discipline may require alternative referencing styles. If so, specify here
+\RequirePackage[numbers]{natbib}
+\bibliographystyle{abbrvnat}
+
+%%%%%%%%%% Author Information %%%%%%%%%%
+
+% Full name: Include all middle names if any
+\fullname{Your Full Name}
+
+% Initials: Include all initials with a full-stop after each, as well as lastname. IMPORTANT: add a tilde (~) between each initial/last name, as this provides the correct spacing and not the larger space that usually follows a fullstop
+\initials{Y.~F.~Name}
+
+% Month: The month of submission
+\thesismonth{April}
+
+% Year: The year of submission
+\thesisyear{2023}
+
+% Formatted Thesis Title: Include your thesis title here. Line breaks can be used to format the title in a visually appealling way, such as the example below
+\thesistitle{Title of Your Thesis\\You Can Use Breaks\\To Separate It}
+
+% Formatted Thesis Sub-Title: Include your thesis sub-title here. Line breaks can be used to format the title in a visually appealling way, such as the example below. If a sub-title isn't used, leave {} blank
+\thesissubtitle{Sub-Title of Your Thesis\\You Can Use Breaks\\To Separate It}
+%\thesissubtitle{}
+
+% Thesis Volume: If your thesis comprises more than one volume, specify the volume number here. If this does not apply, leave as 0. This will update the title page
+\thesisvolume{1}
+
+% Thesis Type: Specifies your degree programme. 0 --> PhD. 1 --> MSc. 2 --> MA. 3 --> MPhil. 4 --> MD. 5 --> DBA. 6 --> DOptom. 
+\thesistype{0}
+
+% Specify page numbering: if true, the front matter pages will be numbered with roman numerals; if false, the title page will start from page 1
+%\RomanNumeralsfalse 
+% or
+\RomanNumeralstrue
+
+%%%%%%%%%% Comment Counters %%%%%%%%%%
+% PLEASE READ: 
+
+% Comment counters are an optional addition to this template. You can add both in-line and margin comments, and also personalise comments for the author and add more for supervisors if needed by duplicating the commands.
+
+% To use comment counters, three things need to be changed if changing the command names or adding more:
+        % Set up the counters (below)
+        % Remove the comment word count from the total word count (below the counter setup)
+        % Display the final count (thesis-statistics)
+        
+\newcounter{comSide}
+\newcommand{\comSide}[1]{\stepcounter{comSide}%
+    \todo[linecolor=black,backgroundcolor=yellow!30,bordercolor=orange,size=\scriptsize]{Comment: #1}}
+
+\newcounter{comPage}
+\newcommand{\comPage}[1]{\stepcounter{comPage}%    
+    \todo[inline,linecolor=black,backgroundcolor=yellow!30,bordercolor=orange,size=\scriptsize]{Comment: #1}}
+
+% These commands remove the todos from the word count, keep as comments
+% Change the comment commands to your own if needed, or add more for any others you add
+%TC:macro \comSide 1
+%TC:macro \comPage 1
+
+\begin{document}
+
+%%%%%%%%%% Include Chapters %%%%%%%%%%
+% Add a new file for each additional chapter, and add a corresponding \input command to add to the PDF
+
+\input{front_matter} % Includes title page, abstract, dedication, acknowledgements, and tables of contents, figures and tables
+\input{introduction}
+\input{literature_review}
+\input{a_chapter}
+\input{conclusion}
+\thesisbibliography{references} % add references to references.bib
+\input{appendices}
+%%%%%%%%%% Comment Counters %%%%%%%%%%
+\input{thesis-statistics}
+
+\end{document}
