@@ -12,7 +12,7 @@ This LaTeX template has been designed for use by students studying at Aston Univ
 - Doctor of Philosophy (PhD)
 
 ### Version
-v1.0, 4th May 2023
+v1.1.0, 11th May 2023
 
 ### Regulation Compliance
 The template is compliant with the 2022/23 regulations for the submission of theses, which can be found [here][regulations].
@@ -133,6 +133,7 @@ Example usage with publications arising from the thesis:
     \publication{Barnes2020BeyondAgents}
 \end{publications}
 ```
+![Publications][5]
 
 Example usage with a range of publications both arising from, and outside of, the studies:
 ```
@@ -150,6 +151,7 @@ Example usage with a range of publications both arising from, and outside of, th
     \end{publicationtype}
 \end{publications}
 ```
+![Publications with Sections][6]
 
 ### Chapter Publications Environment
 
@@ -166,42 +168,58 @@ The environment uses two commands to specify the papers that are related to the 
 Example usage:
 ```
 \begin{chapter-publications}[1]
-\chappub{Barnes2019saso}
+    \chappub{Barnes2019saso}
 \end{chapter-publications}
 ```
-![Image][1]
+![One Publication][1]
 
 ##### Two Publications
 Example usage:
 ```
 \begin{chapter-publications}[2]
-\chappub{Barnes2019saso}
-\chappub{Barnes2020BeyondAgents}
+    \chappub{Barnes2019saso}
+    \chappub{Barnes2020BeyondAgents}
 \end{chapter-publications}
 ```
+![Two Publications][2]
 ##### One Unpublished Paper
 Example usage:
 ```
 \begin{chapter-publications}[0]
-\chapnotpub{The work presented in this chapter has been adapted from work submitted for publication at X.}
+    \chapnotpub{The work presented in this chapter has been adapted from work submitted for publication at X.}
 \end{chapter-publications}
 ```
-
+![One Unpublished Paper][3]
 ##### Two Publications and One Unpublished Paper
 
 Example usage:
 ```
 \begin{chapter-publications}[2]
-\chappub{Barnes2019saso}
-\chappub{Barnes2020BeyondAgents}
-\chapnotpub{Part of the work in this chapter is also under review at Journal Name.}
+    \chappub{Barnes2019saso}
+    \chappub{Barnes2020BeyondAgents}
+    \chapnotpub{Part of the work in this chapter is also under review at Journal Name.}
 \end{chapter-publications}
 ```
+![Two Publications and One Unpublished Paper][4]
 
-##### Appendices
+### Appendices
+
+The `thesisappendices` environment is __optional__, and is used to format any additional information to the main body of the thesis. Chapter and section commands can be used as normal within this environment, as the environment is primarily intended for proper formatting of the material.
 
 Example usage:
+```
+\begin{thesisappendices}
 
+    \chapter{An Appendix}\label{app: title of Appendix A}
+    
+        \section{A Section within an Appendix}
+            Body text here.
+    	
+    \chapter{Another Appendix}
+        Body text here without a new section.
+	
+\end{thesisappendices}
+```
 ---
 
 ## Change Log
@@ -209,7 +227,8 @@ Example usage:
 | Date   | Notes |
 | ------ | ------ |
 | 04/05/23 | First version of project. |
-
+| 11/05/23 | Update to the README including explanation of environments and example images. |
+| 11/05/23 | Updated the .cls file with improved formatting of references and publications. |
 ---
 
 
@@ -217,4 +236,9 @@ Example usage:
 
 
 [regulations]: https://www.aston.ac.uk/graduate-school/current-students-and-supervisors/regulations
-[1]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-1-pub.PNG
+[1]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-1-pub.PNG
+[2]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-2-pub.PNG
+[3]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-1-unpub.PNG
+[4]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-2-pub-1-unpub.PNG
+[5]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-pub.PNG
+[6]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-pub-sections.PNG
