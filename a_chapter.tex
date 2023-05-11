@@ -1,25 +1,27 @@
-\chapter{A Section Name}\chaptermark{Short Version for Top of Page}\label{}
+\chapter{A Section Name}\chaptermark{Short Version for Top of Page}\label{chap:a section}
 
 % This is an example of how to include published works based on the work in a given chapter. If this is not relevant, please omit.
 %%%%%%%%%% Listing Publications at the Start of a Chapter %%%%%%%%%%
 % Below are instructions on how to use the environment to list publications. An example of use can be found in a_chapter.tex
 
-% Environment to add text/citations for un/published paper/s at the beginning of the chapter. The default text is in the square brackets, but this can be changed by supplying new text as a [parameter]
+% Environment to add text/citations for un/published paper/s at the beginning of the chapter. The environment takes one argument -- specifying how many papers have been PUBLISHED. Use [1] for ONE published paper and any number of unpublished papers, use [2] for TWO OR MORE published papers and any number of unpublished papers, and use [0] for ZERO published papers and ONE OR MORE unpublished papers.
+
 % Usage: 
-% \begin{chapter-publications}[The work presented in this chapter has been adapted from the following publications:]
+% \begin{chapter-publications}[2]
 % \chappub{Barnes2019saso} % This is the name of the bibtex entry you want to include
 % \chappub{Barnes2020BeyondAgents}
 % \chapnotpub{Part of this chapter has also been submitted for publication at X.} % This is an unpublished entry. Supply any text as needed
 % \end{chapter-publications}
 
 % Alternatively, if not published anywhere but submitted for example:
-% \begin{chapter-publications}[The work presented in this chapter has been adapted from work submitted for publication at X.]
+% \begin{chapter-publications}[0]
+% \chapnotpub{The work presented in this chapter has been adapted from work submitted for publication at X.}
 % \end{chapter-publications}
 %%%%%%%%%%
-\begin{chapter-publications}[The work presented in this chapter has been adapted from the following publications:]
+\begin{chapter-publications}[2]
 \chappub{Barnes2019saso}
 \chappub{Barnes2020BeyondAgents}
-\chapnotpub{Part of the work in this chapter is also under review at Journal Name.}
+\chapnotpub{Part of the work in this chapter is under review at Journal Name.}
 \end{chapter-publications}
 
 

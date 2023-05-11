@@ -1,7 +1,17 @@
 \begin{thesisfrontmatter}
 % Create the title page using the author information specified above
-\maketitlepage
-\input{abstract}
+\begin{thesisabstract}[Here, Is, A List, Of, Keywords, You Should Include, Up to, Ten, Separated by, Commas]
+
+Write your abstract here. The \texttt{thesisabstract} environment will automatically format it according to the regulations and give the chapter a title. 
+
+The thesis abstract is a concise description of the work 
+undertaken and should contain reference to the problem to be 
+addressed, the approach taken, the key results and conclusion. It must 
+be written in English. All the information 
+should be contained on one sheet of A4 paper unless two abstracts are required (see last sentence). The abstract itself should not exceed 300 words. If the student has obtained permission to submit the thesis in a foreign 
+language, a translation of the abstract should also be provided.
+
+\end{thesisabstract}
 
 %%%%%%%%%% DEDICATION (OPTIONAL) %%%%%%%%%%
 \begin{thesisdedication}
@@ -29,29 +39,30 @@ Any collaborative work must be clearly acknowledged by the student in a signed s
 \end{thesisacknowledgements}
 
 %%%%%%%%%% PUBLICATIONS (OPTIONAL) %%%%%%%%%%
-% List your publications in a manual order.
+% List your publications in a manual order using the \publication command.
 % If you do not have any publications, feel free to remove the text below
-% The \publicationtypetitle command is optional -- this is for if you would like to distinguish between publications arising from your studies, and those that are not as a result of the thesis.
+% The \texttt{publicationtype} environment is optional -- this is for if you would like to distinguish between publications arising from your studies, and those that are not as a result of the thesis.
 
 \begin{publications}
-    \publicationtypetitle[0] % Thesis publications 
-    \publication{Barnes2019CHARIOTTestbed}
-    \publication{Barnes2019saso}
-    \publication{Barnes2019SISSY} 
-    \publication{Barnes2020CoevolutionaryTasks} 
-    \publication{Barnes2020BeyondAgents}
-    \publicationtypetitle[1] % Other publications
-    \publication{Ghouri2020AAgents}
-    \publication{Robinson2007NeuroevolutionEnvironments}
+    \begin{publicationtype}[0] % Thesis publications 
+        \publication{Barnes2019CHARIOTTestbed}
+        \publication{Barnes2019saso}
+        \publication{Barnes2019SISSY} 
+        \publication{Barnes2020CoevolutionaryTasks} 
+        \publication{Barnes2020BeyondAgents}
+    \end{publicationtype}
+    \begin{publicationtype}[1] % Other publications
+        \publication{Ghouri2020AAgents}
+        \publication{Robinson2021CentralisedAgents}
+    \end{publicationtype}
 \end{publications}
 
 
 %%%%%%%%%% Table of Contents, Figures, and Tables %%%%%%%%%%
 % These are populated automatically
-% If you require additional lists, such as for abbreviations, please add them below
-\tableofcontents
-\listoffigures
-\listoftables
-
+% If you require additional lists, such as for abbreviations, please add them below    
+    \tableofcontents
+    \listoffigures
+    \listoftables
 
 \end{thesisfrontmatter}

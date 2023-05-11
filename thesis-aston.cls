@@ -47,12 +47,15 @@
 \newcommand{\thesisvolume}[1]{\def\@thesisvolume{#1}}
 
 % Format quotes, footnotes etc.
-\renewcommand{\footnotesize}{\fontsize{10pt}{1}\selectfont}
-\AtBeginEnvironment{quote}{\footnotesize}
-\AtBeginEnvironment{quotation}{\footnotesize}
-\AtBeginEnvironment{tabular}{\footnotesize}
-\AtBeginEnvironment{equation}{\footnotesize}
-\AtBeginEnvironment{verbatim}{\footnotesize}
+\newcommand{\smallfont}{\fontsize{10pt}{1}\selectfont}
+\newcommand{\smallfontspaced}{\smallfont\onehalfspacing\selectfont}
+\newcommand{\bodyfont}{\fontsize{11pt}{1.5}\selectfont}
+\AtBeginEnvironment{quote}{\smallfont}
+\AtBeginEnvironment{quotation}{\smallfont}
+\AtBeginEnvironment{tabular}{\smallfont}
+\AtBeginEnvironment{equation}{\smallfont}
+\AtBeginEnvironment{verbatim}{\smallfont}
+\renewcommand{\footnotesize}{\smallfont}
 
 \newcommand{\pageauthor}{\mbox{\@initials, \thesistypeshort, Aston University \@thesisyear}}
 \newcommand{\printfullname}{\@fullname}
@@ -165,14 +168,26 @@
 
 
 
-% Create an environment command that can be used to list publications at the start of a chapter 
-\newenvironment{chapter-publications}[1][The work presented in this chapter has been adapted from the following publication:]{
-\hrule
-\vspace{0.5cm}
-\textit{#1}\nobibliography*
+% Create an environment command that can be used to list publications at the start of a chapter. The environment takes one argument to customise whether the text is for plural publications or not -- or if the specified papers are under review and not published.
+
+\newenvironment{chapter-publications}[1][0]{
+    \hrule
+    \vspace{0.5cm}
+    \smallfontspaced
+    \ifnum#1=0
+    \itshape
+    \else
+        \ifnum#1=1
+            \textit{The work presented in this chapter has been adapted from the following publication:}
+            \nobibliography*
+        \else
+            \ifnum#1=2
+                \textit{The work presented in this chapter has been adapted from the following publications:}
+                \nobibliography*
+    \fi\fi\fi
     }{
-\vspace{0.5cm}
-\hrule
+    \vspace{0.5cm}
+    \hrule
 }
 \newcommand{\chappub}[1]{\noindent \cite{#1} \bibentry{#1}.\par}
 \newcommand{\chapnotpub}[1]{\noindent #1\par}
@@ -209,6 +224,7 @@
     % \noindent{#1}
     % \fi
 }{
+
     \vspace*{\fill}
     \noindent\newline
     \textbf{Keywords:} \par
@@ -265,22 +281,26 @@
     \end{singlespace}
 }
 
-% Takes one optional argument, default value is 0. If argument is 0, Personal Acknowledgements will be generated. Else, Collaborator Acknowledgements will be generated.
+% Generates a list of publications published during the degree.
 \newenvironment{publications}{%
     \clearpage
     \chapter*{List of Publications}
     \thispagestyle{plain}
+    \smallfontspaced
     \nobibliography*
 }{}
 
-\newcommand{\publicationtypetitle}[1][0]{
+% Generates a specific list for either publications submitted as part of the studies (specify 0 as an argument, default), or those that were published during the degree but unrelated to the thesis (specify 1 as an argument).
+\newenvironment{publicationtype}[1][0]{
     \ifnum#1=0
-    {\textbf{\noindent Publications Arising from this Thesis:}\par}
+    \noindent{\textbf{Publications Arising from this Thesis:}\par}
     \else
-    {\textbf{\noindent Additional Publications Completed During my Studies:}\par}
+    \bigskip
+    \noindent{\textbf{Additional Publications Completed During my Studies:}\par}
     \fi
-}
+}{}
 
+%
 \newcommand{\publication}[1]{\noindent \cite{#1} \bibentry{#1}.\par}
 
 
@@ -288,6 +308,7 @@
     \ifRomanNumerals
     \frontmatter
     \fi
+    \maketitlepage
 }{
     \ifRomanNumerals
     \mainmatter
@@ -295,12 +316,7 @@
 }
 
 \newenvironment{commentstats}{%
-    
-    
-}{
-    
-    
-}
+}{}
 
 
 \endinput
