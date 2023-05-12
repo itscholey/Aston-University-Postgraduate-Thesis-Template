@@ -12,7 +12,7 @@ This LaTeX template has been designed for use by students studying at Aston Univ
 - Doctor of Philosophy (PhD)
 
 ### Version
-v1.1.0, 11th May 2023
+v1.1.1, 12th May 2023
 
 ### Regulation Compliance
 The template is compliant with the 2022/23 regulations for the submission of theses, which can be found [here][regulations].
@@ -45,7 +45,21 @@ The template has been designed to comply with the formatting specified in the re
 `\bodyfont`
 
 ---
+## Useful Commands
 
+Here is a list of useful commands to format and organise your thesis.
+
+| Command | Description |
+| ------ | ------ |
+|`\chapter{A long title that describes the chapter}`| Creates a new chapter beginning on a new page. The text within the curly brackets is displayed both in the Table of Contents and on the first page of the chapter. |
+|`\chaptermark{Short title}`| Optionally, a shorter version of the chapter title can be specified with this command, which will be displayed in the top right of the header on each page of the chapter. |
+|`\section{A section name}`| For further organisation of the material, this command can be used to create sections which are automatically numbered. |
+|`\subsection{A subsection name}`| Sections can be divided further into subsections using this command.|
+|`\label{chap:lit-rev}`| Labels can be used to label parts of the thesis, be that chapters, sections, figures, equations, etc. |
+|`\ref{chap:lit-rev}`| To refer to labelled items within the body of the thesis, this command can be used. e.g.`"As discussed in Chapter~\ref{chap:lit-rev}...`|
+|`\footnote{Some text here.}`| Creates a numbered footnote at the bottom of the page. |
+
+---
 ## Environments
 
 This template comes with a number of environments that have been created to make formatting of the thesis easier, and in line with the regulations.
@@ -229,6 +243,7 @@ Example usage:
 | 04/05/23 | First version of project. |
 | 11/05/23 | Update to the README including explanation of environments and example images. |
 | 11/05/23 | Updated the .cls file with improved formatting of references and publications. |
+| 12/05/23 | Updated the README with description of useful commands. |
 ---
 
 
@@ -236,9 +251,9 @@ Example usage:
 
 
 [regulations]: https://www.aston.ac.uk/graduate-school/current-students-and-supervisors/regulations
-[1]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-1-pub.PNG
-[2]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-2-pub.PNG
-[3]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-1-unpub.PNG
-[4]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-2-pub-1-unpub.PNG
-[5]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-pub.PNG
-[6]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-pub-sections.PNG
+[1]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-1-pub.PNG
+[2]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-2-pub.PNG
+[3]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-1-unpub.PNG
+[4]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-2-pub-1-unpub.PNG
+[5]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-pub.PNG
+[6]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-pub-sections.PNG
