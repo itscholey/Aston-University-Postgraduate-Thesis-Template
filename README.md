@@ -251,9 +251,9 @@ Example usage:
 
 
 [regulations]: https://www.aston.ac.uk/graduate-school/current-students-and-supervisors/regulations
-[1]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-1-pub.PNG
-[2]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-2-pub.PNG
-[3]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-1-unpub.PNG
-[4]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-2-pub-1-unpub.PNG
-[5]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-pub.PNG
-[6]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/thesis-template-pub-sections.PNG
+[1]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-1-pub.PNG
+[2]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-2-pub.PNG
+[3]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-1-unpub.PNG
+[4]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-2-pub-1-unpub.PNG
+[5]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-pub.PNG
+[6]: https://github.com/itscholey/Aston-University-Postgraduate-Thesis-Template/blob/main/readme-imgs/thesis-template-pub-sections.PNG
